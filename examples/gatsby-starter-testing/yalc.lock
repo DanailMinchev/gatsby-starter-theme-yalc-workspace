@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "gatsby-theme-minimal": {
+      "signature": "923d947d16c6da674593111b6ddad05b",
+      "file": true
+    }
+  }
+}

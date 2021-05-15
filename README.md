@@ -35,6 +35,10 @@
 
 ## Installation
 
+### Install dependencies
+
+Navigate to repository root path and execute following:
+
 ```shell
 npm ci
 
@@ -45,9 +49,65 @@ cd ../../examples/gatsby-starter-testing
 npm ci
 ```
 
+### Initialise [Yalc](https://github.com/wclr/yalc)
+
+Navigate to repository root path and execute following:
+
+- Navigate to `gatsby-theme-minimal` package and publish `gatsby-theme-minimal` package to local Yalc repository:
+
+```shell
+cd packages/gatsby-theme-minimal
+npx yalc publish
+```
+
+- Navigate to `gatsby-starter-testing` example and add `gatsby-theme-minimal` package dependency:
+
+```shell
+cd ../../examples/gatsby-starter-testing
+npx yalc add gatsby-theme-minimal
+npm install
+```
+
+## Update gatsby-theme-minimal changes
+
+Once `gatsby-theme-minimal` package is changed and you would like to test it in `gatsby-starter-testing` example,
+you will need to update the dependencies and Yalc configuration.
+<br />
+Navigate to `gatsby-theme-minimal` package from the repository root path and publish `gatsby-theme-minimal` package with `--push` flag:
+
+```shell
+cd packages/gatsby-theme-minimal
+npx yalc publish --push
+```
+
+You can use `npx yalc push` shortcut instead of `npx yalc publish --push`.
+<br />
+
+If `gatsby-theme-minimal` package changed its own dependencies you will need to execute `npm install` as well in the examples/gatsby-starter-testing:
+
+```shell
+cd ../../examples/gatsby-starter-testing
+npm install --force
+```
+
 ## Directory structure
 
-TODO
+### packages/gatsby-theme-minimal
+
+The Gatsby theme is located in `packages/gatsby-theme-minimal` and it is used in the example app.
+
+### examples/gatsby-starter-testing
+
+The example Gatsby app which is using the Gatsby theme is located in `examples/gatsby-starter-testing`.
+
+This example app is based on [Gatsby Testing Starter](https://github.com/DanailMinchev/gatsby-starter-testing) and
+it has configured `packages/gatsby-theme-minimal` dependency using Yalc.
+
+The `packages/gatsby-theme-minimal` dependency is stored in `.yalc` directory and it is managed by Yalc using `yalc.lock` file.
+
+## GitHub Actions CI pipeline
+
+This repostiory is intergared with GitHub Actions and has CI pipeline defined in [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
 ## Repository configuration
 

@@ -5,6 +5,12 @@ module.exports = {
     author: `@DanailMinchev`,
   },
   plugins: [
+    {
+      resolve: `gatsby-theme-minimal`,
+      options: {
+        optionA: `valueA`
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

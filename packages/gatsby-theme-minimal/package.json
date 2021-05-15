@@ -1,6 +1,5 @@
 {
   "name": "gatsby-theme-minimal",
-  "private": true,
   "description": "A simple Gatsby theme",
   "version": "0.0.0-development",
   "main": "index.js",
@@ -40,6 +39,7 @@
     "cross-env": "7.0.3",
     "dotenv-cli": "4.0.0",
     "fs-extra": "10.0.0",
+    "gatsby": "3.4.2",
     "gatsby-plugin-utils": "1.4.0",
     "husky": "6.0.0",
     "identity-obj-proxy": "3.0.0",
@@ -48,6 +48,8 @@
     "jest-puppeteer": "5.0.3",
     "lint-staged": "11.0.0",
     "prettier": "2.2.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-test-renderer": "17.0.2",
     "semantic-release": "17.4.2",
     "start-server-and-test": "1.12.1"

@@ -42,10 +42,22 @@ jobs:
         run: |
           cd packages/gatsby-theme-minimal
           npm ci
+      - name: Test [packages/gatsby-theme-minimal]
+        run: |
+          cd packages/gatsby-theme-minimal
+          npm test
+      - name: Yalc Publish [packages/gatsby-theme-minimal]
+        run: |
+          cd packages/gatsby-theme-minimal
+          npx yalc publish
+      - name: Add Yalc Dependencies [examples/gatsby-starter-testing]
+        run: |
+          cd examples/gatsby-starter-testing
+          npx yalc add gatsby-theme-minimal
       - name: Install Dependencies [examples/gatsby-starter-testing]
         run: |
           cd examples/gatsby-starter-testing
-          npm ci
+          npm install --force
       - name: Test [examples/gatsby-starter-testing]
         run: |
           cd examples/gatsby-starter-testing
