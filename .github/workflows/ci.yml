@@ -62,3 +62,16 @@ jobs:
         run: |
           cd examples/gatsby-starter-testing
           npm test
+      - name: Upload Test Coverage - Codecov [examples/gatsby-starter-testing]
+        if: ${{ always() }}
+        uses: codecov/codecov-action@v1.5.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Build [examples/gatsby-starter-testing]
+        run: |
+          cd examples/gatsby-starter-testing
+          npm run build
+      - name: Test E2E [examples/gatsby-starter-testing]
+        run: |
+          cd examples/gatsby-starter-testing
+          npm run test:e2e

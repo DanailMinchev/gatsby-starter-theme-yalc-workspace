@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        optionA: `valueA`
+        optionA: `valueA`,
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -6,18 +6,16 @@
   "license": "MIT",
   "author": "Danail Minchev <danail.dev@gmail.com>",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "test": "npm run test:ci",
     "test:dev": "jest --coverage",
     "test:ci": "jest --coverage --ci --runInBand",
     "test:update": "jest --updateSnapshot",
     "test:watch": "jest --watch",
-    "commit": "commit",
     "update": "npx -p npm-check-updates ncu -u && npm install --force",
     "release": "semantic-release"
   },
   "peerDependencies": {
-    "gatsby": "3.4.2",
+    "gatsby": "3.5.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -25,42 +23,23 @@
     "prop-types": "15.7.2"
   },
   "devDependencies": {
-    "@babel/core": "7.14.0",
-    "@commitlint/cli": "12.1.1",
-    "@commitlint/config-conventional": "12.1.1",
-    "@commitlint/prompt-cli": "12.1.1",
+    "@babel/core": "7.14.2",
     "@testing-library/jest-dom": "5.12.0",
-    "@testing-library/react": "11.2.6",
-    "@testing-library/user-event": "13.1.8",
+    "@testing-library/react": "11.2.7",
+    "@testing-library/user-event": "13.1.9",
     "babel-jest": "26.6.3",
     "babel-loader": "8.2.2",
-    "babel-preset-gatsby": "1.4.0",
+    "babel-preset-gatsby": "1.5.0",
     "babel-preset-react-app": "10.0.0",
-    "cross-env": "7.0.3",
-    "dotenv-cli": "4.0.0",
     "fs-extra": "10.0.0",
-    "gatsby": "3.4.2",
-    "gatsby-plugin-utils": "1.4.0",
-    "husky": "6.0.0",
+    "gatsby": "3.5.0",
+    "gatsby-plugin-utils": "1.5.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.6.3",
     "jest-image-snapshot": "4.5.0",
-    "jest-puppeteer": "5.0.3",
-    "lint-staged": "11.0.0",
-    "prettier": "2.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-test-renderer": "17.0.2",
-    "semantic-release": "17.4.2",
-    "start-server-and-test": "1.12.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,json,md}": "prettier --write"
+    "semantic-release": "17.4.3"
   }
 }

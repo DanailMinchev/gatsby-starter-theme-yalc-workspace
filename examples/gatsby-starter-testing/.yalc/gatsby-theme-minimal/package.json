@@ -6,32 +6,21 @@
   "license": "MIT",
   "author": "Danail Minchev <danail.dev@gmail.com>",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "test": "npm run test:ci",
     "test:dev": "jest --coverage",
     "test:ci": "jest --coverage --ci --runInBand",
     "test:update": "jest --updateSnapshot",
     "test:watch": "jest --watch",
-    "commit": "commit",
     "update": "npx -p npm-check-updates ncu -u && npm install --force",
     "release": "semantic-release"
   },
   "peerDependencies": {
-    "gatsby": "3.4.2",
+    "gatsby": "3.5.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "dependencies": {
     "prop-types": "15.7.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,json,md}": "prettier --write"
-  },
-  "yalcSig": "923d947d16c6da674593111b6ddad05b"
+  "yalcSig": "4c3e943ba293a621d1fce758cd7421be"
 }
