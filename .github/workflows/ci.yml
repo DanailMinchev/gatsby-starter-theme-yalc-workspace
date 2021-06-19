@@ -19,6 +19,7 @@ defaults:
 jobs:
   build-and-test:
     name: Build and Test
+    environment: ci_environment
     runs-on: ubuntu-latest
     strategy:
       matrix:
