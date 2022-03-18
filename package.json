@@ -15,7 +15,7 @@
     "@commitlint/config-conventional": "12.1.4",
     "@commitlint/prompt-cli": "12.1.4",
     "husky": "6.0.0",
-    "lint-staged": "11.0.0",
+    "lint-staged": "12.3.7",
     "prettier": "2.3.0",
     "yalc": "1.0.0-pre.53"
   },
